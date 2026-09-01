@@ -1,0 +1,19 @@
+/* El cargador de fotografías ocupa las dos columnas del formulario. */
+.publication-form .form-row .photo-upload {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.publication-form .form-row:has(.photo-upload) {
+  grid-template-columns: minmax(160px, 0.38fr) minmax(0, 1fr);
+}
+
+.photo-grid:empty {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .publication-form .form-row:has(.photo-upload) {
+    grid-template-columns: 1fr;
+  }
+}

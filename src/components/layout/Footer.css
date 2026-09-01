@@ -1,0 +1,177 @@
+/* =========================================
+   INVERCOL - FOOTER
+   ========================================= */
+
+.site-footer {
+    width: 100%;
+    background: #17251d;
+    color: #ffffff;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+
+.footer-container {
+    width: min(1200px, calc(100% - 48px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1.2fr 1fr;
+    gap: 70px;
+
+    padding: 72px 0 62px;
+}
+
+/* =========================================
+   MARCA
+   ========================================= */
+
+.footer-brand strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1;
+}
+
+.footer-brand p {
+    max-width: 320px;
+
+    margin: 20px 0 0;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+   COLUMNAS
+   ========================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h4 {
+    margin: 0 0 20px;
+
+    color: #d6bd8a;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.footer-column a,
+.footer-column p {
+    margin: 0 0 11px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.footer-column a {
+    text-decoration: none;
+
+    transition:
+            color 0.25s ease,
+            transform 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* =========================================
+   PARTE INFERIOR
+   ========================================= */
+
+.footer-bottom {
+    width: min(1200px, calc(100% - 48px));
+    margin: 0 auto;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+    .footer-container {
+        width: min(100% - 32px, 900px);
+
+        grid-template-columns: 1.5fr 1fr;
+        gap: 48px;
+
+        padding: 60px 0 50px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-admin-link {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        width: min(100% - 32px, 900px);
+    }
+}
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 600px) {
+    .footer-container {
+        width: calc(100% - 32px);
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 38px;
+
+        padding: 52px 0 42px;
+    }
+
+    .footer-brand p {
+        max-width: 290px;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 16px;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 32px);
+
+        padding: 18px 0;
+
+        font-size: 0.7rem;
+    }
+}
+
+.footer-admin-link a {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.78rem;
+}

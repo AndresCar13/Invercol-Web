@@ -1,0 +1,260 @@
+/* =========================================
+   INVERCOL - HERO
+   ========================================= */
+
+.hero {
+    position: relative;
+    min-height: 620px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+            linear-gradient(
+                    105deg,
+                    #17251d 0%,
+                    #24372b 48%,
+                    #536154 100%
+            );
+}
+
+/* =========================================
+   DECORACIÓN / OVERLAY
+   ========================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+            radial-gradient(
+                    circle at 78% 45%,
+                    rgba(197, 170, 116, 0.18),
+                    transparent 28%
+            ),
+            linear-gradient(
+                    90deg,
+                    rgba(15, 25, 20, 0.18),
+                    transparent 70%
+            );
+
+    pointer-events: none;
+}
+
+/* Elemento decorativo sutil */
+.hero::after {
+    content: "";
+
+    position: absolute;
+    right: -120px;
+    bottom: -180px;
+
+    width: 520px;
+    height: 520px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1200px, calc(100% - 48px));
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+/* =========================================
+   ETIQUETA
+   ========================================= */
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    color: #d6bd8a;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.hero-label::before {
+    content: "";
+
+    display: block;
+
+    width: 34px;
+    height: 1px;
+
+    background: #d6bd8a;
+}
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.hero h1 {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(3.2rem, 6vw, 5.8rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+/* =========================================
+   DESCRIPCIÓN
+   ========================================= */
+
+.hero p {
+    max-width: 540px;
+
+    margin: 28px 0 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 1.08rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 38px;
+}
+
+.hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+    padding: 0 25px;
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease;
+}
+
+/* Primer botón */
+
+.hero-actions a:first-child {
+    background: #c6aa73;
+    color: #17251d;
+}
+
+.hero-actions a:first-child:hover {
+    background: #d5bc8d;
+    transform: translateY(-2px);
+}
+
+/* Segundo botón */
+
+.hero-actions a:last-child {
+    border-color: rgba(255, 255, 255, 0.38);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-actions a:last-child:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero-content {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        max-width: 650px;
+    }
+}
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        width: calc(100% - 32px);
+        padding: 70px 0;
+    }
+
+    .hero-label {
+        margin-bottom: 20px;
+        font-size: 0.68rem;
+        letter-spacing: 0.15em;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.7rem, 13vw, 4rem);
+        line-height: 1;
+    }
+
+    .hero p {
+        margin-top: 22px;
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 280px;
+        margin-top: 30px;
+    }
+
+    .hero-actions a {
+        width: 100%;
+    }
+}
